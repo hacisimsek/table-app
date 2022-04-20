@@ -1,0 +1,40 @@
+{
+  "agents": [
+    {
+      "id": 1,
+      "fullname": "Huseyin Kucukdal",
+      "email": "huseyin.kucukdal@logsign.net",
+      "checkedIn": false
+    },
+    {
+      "id": 2,
+      "fullname": "Fahreddin Yapar",
+      "email": "fahreddin.yapar@logsign.net",
+      "checkedIn": false
+    }
+  ],
+  "cases": [
+    {
+      "id": 1,
+      "title": "Parser socket unavailable",
+      "agentId": 1,
+      "status": "incomplete",
+      "capabilities": {}
+    },
+    {
+      "id": 2,
+      "title": "Test case for SOC",
+      "status": "complete",
+      "agentId": 2,
+      "capabilities": {
+        "expire": {},
+        "cache": {
+          "cache_time": 110,
+          "key_fields": ["ip"],
+          "method": "unblock-ip"
+        }
+      }
+    }
+  ]
+}
+

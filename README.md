@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+## Logsign `UI Development Challenge`
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Hedef
 
-## Available Scripts
+Calisanlara atanmis caselerin listenelebilgidi, yeni case ekleyebilecegimiz, guncelleyebilecegimiz ve silebilecegimiz  bir `React` uygulamasi gelistirilmesi.<br>
 
-In the project directory, you can run:
+Case Form olusturulurken herhangi bir form kutuphanesinden faydalinabilir. (redux-form, formsy-react, antd) fakat capabilities field icin mutlak react-jsonschema-form kutuphanesi kullanilmalidir.
+(https://react-jsonschema-form.readthedocs.io/en/latest/)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Uygulamanın development mode da çalışması `UI Development Challenge` kapsamında yeterlidir, deployment beklentisi bulunmamaktadır.<br>
+Uygulamanın modern/güncel browserlarda görüntülenebilmesi yeterlidir.<br>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### `npm run dev`
 
-### `npm test`
+Uygulamayı development mode da başlatır.<br>
+Görüntülemek için: [http://localhost:3000](http://localhost:3000)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+UI uygulaması ile beraber, agent ve case lerin listelenebildiği Fake REST API ([json-server](https://github.com/typicode/json-server)) çalıştırır. <br>
+[http://localhost:3004](http://localhost:3004)
 
-### `npm run build`
+Geliştirme esnasında bu API aracılığı ile agent / case listeleyebilir, silebilir, ekleyebilir ya da güncelleyebilirsiniz.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+GET    /cases
+GET    /cases/1
+POST   /cases
+PUT    /cases/1
+PATCH  /cases/1
+DELETE /cases/1
+GET    /agents
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Örnek / Beklenen case listeleme ekleme ve duzenleme sayfalari mockup lari
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+https://www.figma.com/file/UXkgxzbBixM1XHgyERRxlo/ui-case?node-id=0%3A1
 
-### `npm run eject`
+### Not
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Proje kapsamında işinizi kolaylaştırabileceğini düşündüğünüz, ihtiyaç duyduğunuz herhangi bir teknolojiyi (React-FlexBox-Grid, redux, mobx, react-hooks, react-forms, react-bootstrap, styled-component vb.) kullanmaktan çekinmeyin.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Herhangi bir state manager kullanmaniz case degerlendirmesi acisindan olumlu olacaktir.(Redux mobx vs...)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+json-schema-form kutuphanesi kullanilmasi ve entegre edilmesi case degerlendirilmesi acisindan onemlidir.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Component testlerinin yazilmasi case degerlendirmesi acisindan artidir.
+  
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+`UI Development Challenge` projesinin işlevselliğini yitirmemesi için yaptığınız çalışmayı üçüncü kişilerle paylaşmamanızı rica ederiz.
