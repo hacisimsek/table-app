@@ -11,16 +11,15 @@
       "fullname": "Fahreddin Yapar",
       "email": "fahreddin.yapar@logsign.net",
       "checkedIn": false
+    },
+    {
+      "id": 3,
+      "fullname": "Hacı Şimşek",
+      "email": "haci.simsek@logsign.net",
+      "checkedIn": false
     }
   ],
   "cases": [
-    {
-      "id": 1,
-      "title": "Parser socket unavailable",
-      "agentId": 1,
-      "status": "incomplete",
-      "capabilities": {}
-    },
     {
       "id": 2,
       "title": "Test case for SOC",
@@ -30,11 +29,76 @@
         "expire": {},
         "cache": {
           "cache_time": 110,
-          "key_fields": ["ip"],
+          "key_fields": [
+            "ip"
+          ],
+          "method": "unblock-ip"
+        }
+      }
+    },
+    {
+      "id": 3,
+      "title": "deneme",
+      "status": "incomplete",
+      "agentId": 3,
+      "capabilities": {
+        "cache": {},
+        "expire": {
+          "expire_time": 360,
+          "key_fields": [
+            "ip"
+          ],
+          "method": "unblock-ip"
+        }
+      }
+    },
+    {
+      "id": 4,
+      "title": "first task",
+      "status": "incomplete",
+      "agentId": 1,
+      "capabilities": {
+        "cache": {
+          "cache_time": 700,
+          "key_fields": [
+            "ip"
+          ],
+          "method": "unblock-ip"
+        },
+        "expire": {}
+      }
+    },
+    {
+      "id": 5,
+      "title": "Test case for SOC",
+      "status": "incomplete",
+      "agentId": 2,
+      "capabilities": {
+        "cache": {
+          "cache_time": 1101,
+          "key_fields": [
+            "ip"
+          ],
+          "method": "unblock-ip"
+        },
+        "expire": {}
+      }
+    },
+    {
+      "id": 6,
+      "title": "denemeToday",
+      "status": "incomplete",
+      "agentId": 3,
+      "capabilities": {
+        "cache": {},
+        "expire": {
+          "expire_time": 5000,
+          "key_fields": [
+            "ip"
+          ],
           "method": "unblock-ip"
         }
       }
     }
   ]
 }
-

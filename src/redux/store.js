@@ -1,13 +1,13 @@
-import {configureStore} from '@reduxjs/toolkit';
+import { configureStore } from '@reduxjs/toolkit';
 
 import charactersSlice from './charactersSlice';
-import quotesSlice from './quotesSlice';
+import casesSlice from './casesSlice';
 
 export const store = configureStore({
-    reducer: {
-        // reducer,
-        characters: charactersSlice,
-        quotes: quotesSlice,
-    },
-    devTools: true,
+	reducer: {
+		// reducer,
+		characters: charactersSlice,
+		cases: casesSlice,
+	},
+	devTools: true,
 });
