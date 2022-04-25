@@ -31,6 +31,12 @@ const Home = () => {
 		}
 	}, [dispatch, status]);
 
+	const handleDelete = (id) => {
+		if (window.confirm('Are you sure you want to delete this case?')) {
+			dispatch(removeCaseAsync(id));
+		}
+	};
+
 	if (status === 'failed') {
 		return <Error error={error} />;
 	}
@@ -63,7 +69,7 @@ const Home = () => {
 										Edit Item
 									</Link>
 									-
-									<button className="btn btn-danger m-2" onClick={() => dispatch(removeCaseAsync(item.id))}>
+									<button className="btn btn-danger m-2" onClick={() => handleDelete(item.id)}>
 										Delete Item
 									</button>
 								</td>

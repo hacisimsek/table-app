@@ -8,7 +8,6 @@ import { Container } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 
 import capabilitiesSchema from '../../schema';
-import { Button } from 'bootstrap';
 
 const Add = () => {
 	const characters = useSelector((state) => state.characters.items);
@@ -47,7 +46,7 @@ const Add = () => {
 
 		e.preventDefault();
 		const addCases = {
-			id: cases.length + 1,
+			id: cases[cases.length - 1].id + 1,
 			title,
 			status: 'incomplete',
 			agentId: Number(name),

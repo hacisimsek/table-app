@@ -17,7 +17,6 @@ export const removeCaseAsync = createAsyncThunk('cases/removeCaseAsync', async (
 });
 
 export const editCaseAsync = createAsyncThunk('cases/editCaseAsync', async (newCase) => {
-	console.log('🚀 ~ file: casesSlice.js ~ line 20 ~ editCaseAsync ~ newCase', newCase);
 	const response = await axios.put(`${process.env.REACT_APP_API_BASE_URL}/cases/${newCase.id}`, newCase);
 	return response.data;
 });
@@ -59,7 +58,7 @@ const casesSlice = createSlice({
 			state.status = 'loading';
 		},
 		[removeCaseAsync.fulfilled]: (state, action) => {
-			state.items = state.items.filter((item) => item.id !== action.payload.id);
+			state.items = state.items.filter((item) => item.id !== action.payload);
 			state.status = 'succeeded';
 		},
 		[removeCaseAsync.failed]: (state, action) => {
