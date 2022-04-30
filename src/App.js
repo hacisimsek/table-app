@@ -9,7 +9,7 @@ import Edit from './pages/Edit';
 
 function App() {
 	return (
-		<div className="App">
+		<Container>
 			<Container className="p-4">
 				<div className="d-flex justify-content-end">
 					{/* add button */}
@@ -27,7 +27,7 @@ function App() {
 				<Route path="/add_case" element={<Add />} />
 				<Route path="/edit_case/:id" element={<Edit />} />
 			</Routes>
-		</div>
+		</Container>
 	);
 }
 
