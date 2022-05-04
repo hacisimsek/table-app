@@ -51,6 +51,7 @@ const Add = () => {
 		};
 		await dispatch(addCaseAsync(addCases)).then(() => {
 			alert('Case added successfully');
+			setFormData({});
 		});
 	};
 
