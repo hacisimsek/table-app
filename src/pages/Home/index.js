@@ -63,7 +63,9 @@ const Home = () => {
 								<td>{item.title}</td>
 								<td>{findName(item.agentId)}</td>
 								<td>{item.status}</td>
-								<td>{String(typeof item.capabilities['cache'] === 'object' ? 'Cache' : '--')}</td>
+								<td>
+									{item.capabilities.cache.cache_time ? 'Cache' : item.capabilities.expire.expire_time ? 'Expire' : '-'}
+								</td>
 								<td>
 									<Link to={`/edit_case/${item.id}`} className="btn btn-primary m-2">
 										Edit Item
